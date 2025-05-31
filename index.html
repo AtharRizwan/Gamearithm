@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamearithm - Fun Math Learning</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Gamearithm</h1>
+            <div class="user-profile">
+                <button class="back-btn">← Back to Menu</button>
+                <button class="sound-btn" aria-label="Toggle Sound">🔊</button>
+                <span class="user-name">Player</span>
+                <div class="score-container">
+                    <span class="stars">⭐</span>
+                    <span class="score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="welcome-screen" id="welcomeScreen">
+                <h2>Welcome to Gamearithm!</h2>
+                <div class="character-selection">
+                    <h3>Choose Your Learning Buddy</h3>
+                    <div class="characters">
+                        <div class="character" data-character="wizard">🧙‍♂️ Professor Arithmus</div>
+                        <div class="character" data-character="alien">👽 Cosmo</div>
+                        <div class="character" data-character="robot">🤖 Calculator-3000</div>
+                    </div>
+                </div>
+                <button class="start-btn">Start Learning</button>
+            </div>
+
+            <div class="game-container" id="gameContainer" style="display: none;">
+                <div class="sidebar">
+                    <div class="progress-tracker">
+                        <h3>Your Progress</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="topics">
+                        <button class="topic-btn" data-topic="addition">Addition</button>
+                        <button class="topic-btn" data-topic="subtraction">Subtraction</button>
+                        <button class="topic-btn" data-topic="multiplication">Multiplication</button>
+                        <button class="topic-btn" data-topic="division">Division</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="character-companion">
+                        <div class="character-avatar"></div>
+                        <div class="character-speech-bubble"></div>
+                    </div>
+                    
+                    <div class="problem-container">
+                        <div class="problem">
+                            <span class="num1">5</span>
+                            <span class="operator">+</span>
+                            <span class="num2">3</span>
+                            <span>=</span>
+                            <input type="number" class="answer-input" max="100">
+                        </div>
+                        <div class="problem-controls">
+                            <button class="hint-btn" disabled>
+                                <span class="hint-icon">💡</span>
+                                Need a Hint?
+                                <span class="hint-timer"></span>
+                            </button>
+                            <button class="check-btn">Check Answer</button>
+                        </div>
+                    </div>
+
+                    <div class="visual-aid">
+                        <div class="objects-container"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/audio-manager.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/game-logic.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html> 
